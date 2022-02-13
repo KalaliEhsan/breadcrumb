@@ -17,4 +17,4 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Preview
 
-![](https://github.com/KalaliEhsan/breadcrumb/files/gif/demo.gif)
+![](https://github.com/KalaliEhsan/breadcrumb/blob/master/files/gif/demo.gif)
