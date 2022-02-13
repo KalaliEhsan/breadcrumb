@@ -12,22 +12,28 @@ class NextPage1 extends StatefulWidget {
 class _NextPage1State extends State<NextPage1> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Next Page'),
-      ),
-      body: Stack(children: [
-        Container(
-            alignment: Alignment.center,
-            color: Colors.white,
-            child: ElevatedButton(
-                child: const Text('Prev Page'),
-                onPressed: () {
-                  Navigator.pop(context);
-                  breadcrumb.removeLast();
-                })),
-        Breadcrumb()
-      ]),
-    );
+    return WillPopScope(
+        child: Scaffold(
+          appBar: AppBar(
+            title: const Text('Next Page1'),
+          ),
+          body: Stack(children: [
+            Container(
+                alignment: Alignment.center,
+                color: Colors.white,
+                child: ElevatedButton(
+                    child: const Text('Prev Page'),
+                    onPressed: () {
+                      Navigator.pop(context);
+                      breadcrumb.removeLast();
+                    })),
+            Breadcrumb()
+          ]),
+        ),
+        onWillPop: () async {
+          Navigator.pop(context);
+          breadcrumb.removeLast();
+          return true;
+        });
   }
 }
