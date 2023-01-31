@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.pushNamed(context, NextPage.route);
                       breadcrumb.add(NextPage.route);
                     }))),
-        Breadcrumb()
+        const Breadcrumb()
       ]),
     );
   }

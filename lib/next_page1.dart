@@ -27,7 +27,7 @@ class _NextPage1State extends State<NextPage1> {
                       Navigator.pop(context);
                       breadcrumb.removeLast();
                     })),
-            Breadcrumb()
+            const Breadcrumb()
           ]),
         ),
         onWillPop: () async {

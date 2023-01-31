@@ -38,7 +38,7 @@ class _NextPageState extends State<NextPage> {
                             breadcrumb.removeLast();
                           })
                     ])),
-            Breadcrumb()
+            const Breadcrumb()
           ]),
         ),
         onWillPop: () async {
